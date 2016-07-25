@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.bportal.kernel.model.AdvItem">
+		<field name="advItemId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="advPackageId" type="long" />
+		<field name="advItemName" type="String" />
+		<field name="content" type="String" />
+		<field name="targetLink" type="String" />
+		<field name="duaration" type="int" />
+		<field name="status" type="int" />
+		<field name="order" type="int" />
+		<field name="description" type="String" />
+	</model>
+	<model name="com.bportal.kernel.model.AdvPackage">
+		<field name="advPackageId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="templateId" type="long" />
+		<field name="advPackageName" type="String" />
+		<field name="layoutId" type="long" />
+		<field name="status" type="int" />
+		<field name="beginDate" type="Date" />
+		<field name="expiredDate" type="Date" />
+		<field name="description" type="String" />
+	</model>
+	<model name="com.bportal.kernel.model.AdvTemplate">
+		<field name="advTemplateId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="advTemplateName" type="String" />
+		<field name="content" type="String" />
+		<field name="status" type="int" />
+		<field name="type" type="int" />
+		<field name="description" type="String" />
+	</model>
+</model-hints>

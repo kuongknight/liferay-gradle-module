@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="com.bportal.kernel.service.impl.AdvItemLocalServiceImpl" id="com.bportal.kernel.service.AdvItemLocalService" />
+	<bean class="com.bportal.kernel.service.impl.AdvItemServiceImpl" id="com.bportal.kernel.service.AdvItemService" />
+	<bean class="com.bportal.kernel.service.persistence.impl.AdvItemPersistenceImpl" id="com.bportal.kernel.service.persistence.AdvItemPersistence" parent="basePersistence" />
+	<bean class="com.bportal.kernel.service.impl.AdvPackageLocalServiceImpl" id="com.bportal.kernel.service.AdvPackageLocalService" />
+	<bean class="com.bportal.kernel.service.impl.AdvPackageServiceImpl" id="com.bportal.kernel.service.AdvPackageService" />
+	<bean class="com.bportal.kernel.service.persistence.impl.AdvPackagePersistenceImpl" id="com.bportal.kernel.service.persistence.AdvPackagePersistence" parent="basePersistence" />
+	<bean class="com.bportal.kernel.service.impl.AdvTemplateLocalServiceImpl" id="com.bportal.kernel.service.AdvTemplateLocalService" />
+	<bean class="com.bportal.kernel.service.impl.AdvTemplateServiceImpl" id="com.bportal.kernel.service.AdvTemplateService" />
+	<bean class="com.bportal.kernel.service.persistence.impl.AdvTemplatePersistenceImpl" id="com.bportal.kernel.service.persistence.AdvTemplatePersistence" parent="basePersistence" />
+</beans>

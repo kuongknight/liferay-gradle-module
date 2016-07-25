@@ -1,0 +1,7 @@
+Bundle-SymbolicName: core-api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.bportal.kernel.exception,\
+	com.bportal.kernel.model,\
+	com.bportal.kernel.service,\
+	com.bportal.kernel.service.persistence

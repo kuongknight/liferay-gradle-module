@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.bportal.kernel">
+	<namespace>BPortal</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="AdvPackage" remote-service="true" uuid="false">
+
+		<!-- PK fields -->
+
+		<column name="advPackageId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="templateId" type="long" />
+		<column name="advPackageName" type="String" />
+		<column name="layoutId" type="long" />
+		<column name="status" type="int" />
+		<column name="beginDate" type="Date" />
+		<column name="expiredDate" type="Date" />
+		<column name="description" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="advPackageId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Status" return-type="Collection">
+			<finder-column name="status" />
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="AdvTemplate" remote-service="true" uuid="false">
+
+		<!-- PK fields -->
+
+		<column name="advTemplateId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="advTemplateName" type="String" />
+		<column name="content" type="String" />
+		<column name="status" type="int" />
+		<column name="type" type="int" />
+		<column name="description" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="advTemplateId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Status" return-type="Collection">
+			<finder-column name="status" />
+		</finder>
+	</entity>
+	<entity local-service="true" name="AdvItem" remote-service="true" uuid="false">
+
+		<!-- PK fields -->
+
+		<column name="advItemId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="advPackageId" type="long" />
+		<column name="advItemName" type="String" />
+		<column name="content" type="String" />
+		<column name="targetLink" type="String" />
+		<column name="duaration" type="int" />
+		<column name="status" type="int" />
+		<column name="order" type="int" />
+		<column name="description" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="order" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="AdvPackageId" return-type="Collection">
+			<finder-column name="advPackageId" />
+		</finder>
+		
+		<finder name="Status" return-type="Collection">
+			<finder-column name="status" />
+		</finder>
+	</entity>
+	
+</service-builder>
